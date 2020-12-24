@@ -3,14 +3,31 @@ Markup language for static web pages, first created in 1993, now at version HTLM
 
 ## Document structure
 ```
-<!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="UTF-8">
-    <title>Базовая разметка HTML</title>
+<!DOCTYPE html>					\\ mandatory for browser to recognize html format
+<html>						\\ mandatory tag signifies html boundaries
+
+  <head>					\\ meta information, here are useful examples
+    <meta charset="UTF-8">			\\ encoding
+    <title>Базовая разметка HTML</title>	\\ title to be shown in browser tab
   </head>
-  <body>
+  
+  <body>					\\ contents
+  <header>					\\ top element for all the pages
+    <nav></nav>					\\ navigation menu
+    <aside></aside>				\\ side menu
+  </header>
+  
+  <main>					\\ page-unique content, can contain header and footer, and sections, articles, headers, etc.
+    <header></header>
+    <section></section>
+    <article></arcticle>
+    <aside></aside>
+    <footer></footer>
+  </main>
+  
+  <footer></footer>				\\ bottom element for all the pages
   </body>
+  
 </html>
 ```
 
