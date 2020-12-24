@@ -31,25 +31,40 @@ Markup language for static web pages, first created in 1993, now at version HTLM
 </html>
 ```
 
-## Text structuring tags
+## Tags
+Tags can be block or line, can have attributes
+
+### Headings
+```
+<h1>, <h2>, ...
+```
+
+### Paragraph formatting
 ```
 <p> <pre> <code>
-<h1>, <h2>, ...
+```
+
+### Lists
+```
+\\unordered
 <ul>
+  <li></li>
+</ul>
+
+\\ordered
 <ol>
-<li>
+  <li></li>
+</ol>
+
+\\defined
+<dl>
+  <li></li>
+</dl>
 ```
 
-## Global attributes
+### Tables
 ```
-align=["right", "left, "center"]
-title=<string> -- will be shown on mouse hover
-id
-```
-
-## Tables
-```
-<table>
+<table>						\\ Use rowspan and colspan attributes to create merge cells
     <thead> <!-- Блок с заголовками -->
         <tr> <!-- Строка -->
             <th>Первая ячейка</th>
@@ -67,29 +82,23 @@ id
     </tbody>
 </table>
 ```
-rowspan and colspan to create merge cells
 
-## Special characters (mnemonics)
-```
-&clubs; &mdash; &lt;
-```
-
-## Links
+### Links
 ```
 <a href="Ссылка на документ">Текст ссылки</a>
 ```
 
-## Images
+### Images
 ```
 <img src="https://example.com/images.png" alt="Аналитика компании за 2007 год">
 ```
 
-## Audio
+### Audio
 ```
 <audio src="путь к аудио-файлу" controls></audio>
 ```
 
-## Video
+### Video
 ```
 <video src="https://example.com/our-video.mp4" controls></video>
 
@@ -100,15 +109,16 @@ rowspan and colspan to create merge cells
 </video>
 ```
 
-## Meta attributes
 
-## Forms
+### Forms
 ```
 <form action="/search">
   // Данные, после заполнения, будут отправлены на страницу /search
   <input type="text">
 </form>
+```
 
+```
 <form>
     <label>
         <input type="checkbox" name="languages" value="HTML">
@@ -123,19 +133,9 @@ rowspan and colspan to create merge cells
         Хочу изучать JS
     </label>
 </form>
+```
 
-<form>
-    <label>
-        <input type="radio" name="question" value="yes">
-        Да
-    </label>
-    <br>
-    <label>
-        <input type="radio" name="question" value="no">
-        Нет
-    </label>
-</form>
-
+```
 <form action="/people">
     <label>
         <input type="radio" name="gender" value="m">
@@ -146,12 +146,16 @@ rowspan and colspan to create merge cells
         <input type="radio" name="gender" value="f">
         Female
     </label>
-	
+```
+
+```
 </form>
 <form action="/people">
     <textarea rows="4" cols="30">textarea с 5 строками и 30 столбцами</textarea>
 </form>
+```
 
+```
 <form>
     <select>
         <option disabled>Какой курс вы хотите пройти?</option>
@@ -174,44 +178,17 @@ rowspan and colspan to create merge cells
           <option>CSS</option>
     </select>
 </form>
-
-
+```
+```
 <form>
     <button>Отправить</button>
 </form>
 ```
 
-Alltogether
-```
-<h2>Форма поиска</h2>
-<form>
-    <label>
-        Введите ваш запрос
-        <input type="text">
-    </label>
-    <select>
-        <option disabled>В каком разделе искать?</option>
-        <option>JS</option>
-        <option>HTML</option>
-        <option>CSS</option>
-    </select>
-    <button>Искать</button>
-</form>
-```
+### Semantic web
+Semantic tags - article, aside, footer, header, main, nav, section
 
-## Semantic tags
-article
-aside
-footer
-header
-main
-nav
-section
-
-vs
-
-div etc
-
+Micro
 ```
 <section itemscope itemtype="http://schema.org/Organization">
     <h1 itemprop="name">Компания «Прауд»</h1>
@@ -219,17 +196,18 @@ div etc
     <p>Телефон: <span itemprop="telephone">8 (8765) 333-00-00</span></p>
     <p>Email: <span itemprop="email">info@proud-company.test</span></p>
 </section>
+```
 
-<header>
-    <img src="/logo.png" alt="Логотип"> <!-- Логотип сайта -->
-    <nav> <!-- Меню -->
-        <ul>
-            <li><a href="/">Главная</a></li>
-            <li><a href="/about">О нас</a></li>
-        </ul>
-    </nav>
-</header>
+## Attributes
+Global, meta, tag-specific
 
+## Special characters (mnemonics)
+```
+&clubs; &mdash; &lt;
+```
+
+## Complete examples
+```
 <header>
     <img src="/logo.png" alt="Логотип"> <!-- Логотип сайта -->
     <nav> <!-- Меню -->
@@ -282,4 +260,20 @@ div etc
           </article>
     </section>
 </main>
+```
+```
+<h2>Форма поиска</h2>
+<form>
+    <label>
+        Введите ваш запрос
+        <input type="text">
+    </label>
+    <select>
+        <option disabled>В каком разделе искать?</option>
+        <option>JS</option>
+        <option>HTML</option>
+        <option>CSS</option>
+    </select>
+    <button>Искать</button>
+</form>
 ```
