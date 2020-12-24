@@ -5,28 +5,33 @@ Markup language for static web pages, first created in 1993, now at version HTLM
 ```
 <!DOCTYPE html>
 <html>
-<head>
-<meta charset="UTF-8">
+  <head>
+    <meta charset="UTF-8">
     <title>Базовая разметка HTML</title>
-</head>
-<body></body>
+  </head>
+  <body>
+  </body>
 </html>
 ```
 
 ## Text structuring tags
+```
 <p> <pre> <code>
 <h1>, <h2>, ...
 <ul>
 <ol>
 <li>
+```
 
 ## Global attributes
+```
 align=["right", "left, "center"]
 title=<string> -- will be shown on mouse hover
 id
-
+```
 
 ## Tables
+```
 <table>
     <thead> <!-- Блок с заголовками -->
         <tr> <!-- Строка -->
@@ -44,23 +49,31 @@ id
         </tr>
     </tbody>
 </table>
-
+```
 rowspan and colspan to create merge cells
 
 ## Special characters (mnemonics)
+```
 &clubs; &mdash; &lt;
-https://ru.wikipedia.org/wiki/%D0%9C%D0%BD%D0%B5%D0%BC%D0%BE%D0%BD%D0%B8%D0%BA%D0%B8_%D0%B2_HTML
+```
 
 ## Links
+```
 <a href="Ссылка на документ">Текст ссылки</a>
+```
 
 ## Images
+```
 <img src="https://example.com/images.png" alt="Аналитика компании за 2007 год">
+```
 
 ## Audio
+```
 <audio src="путь к аудио-файлу" controls></audio>
+```
 
 ## Video
+```
 <video src="https://example.com/our-video.mp4" controls></video>
 
 <video width="500" height="500" controls>
@@ -68,10 +81,12 @@ https://ru.wikipedia.org/wiki/%D0%9C%D0%BD%D0%B5%D0%BC%D0%BE%D0%BD%D0%B8%D0%BA%D
     <source src="https://example.com/our-video.webm" type="video/webm">
     <source src="https://example.com/our-video.ogg" type="video/ogg">
 </video>
+```
 
 ## Meta attributes
 
 ## Forms
+```
 <form action="/search">
   // Данные, после заполнения, будут отправлены на страницу /search
   <input type="text">
@@ -147,9 +162,10 @@ https://ru.wikipedia.org/wiki/%D0%9C%D0%BD%D0%B5%D0%BC%D0%BE%D0%BD%D0%B8%D0%BA%D
 <form>
     <button>Отправить</button>
 </form>
+```
 
 Alltogether
-
+```
 <h2>Форма поиска</h2>
 <form>
     <label>
@@ -164,6 +180,7 @@ Alltogether
     </select>
     <button>Искать</button>
 </form>
+```
 
 ## Semantic tags
 article
@@ -178,6 +195,7 @@ vs
 
 div etc
 
+```
 <section itemscope itemtype="http://schema.org/Organization">
     <h1 itemprop="name">Компания «Прауд»</h1>
     <p>Адрес: <span itemprop="address">г.Мотино, улица Строителей, дом 6</span></p>
@@ -247,3 +265,4 @@ div etc
           </article>
     </section>
 </main>
+```
