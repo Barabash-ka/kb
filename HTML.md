@@ -2,7 +2,7 @@
 Markup language for static web pages, first created in 1993, now at version HTLM5.
 
 ## Document structure
-```
+```html
 <!DOCTYPE html>					\\ mandatory for browser to recognize html format
 <html>						\\ mandatory tag signifies html boundaries
 
