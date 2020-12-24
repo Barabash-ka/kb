@@ -1,7 +1,8 @@
 # HTML 
-Markup language for static web pages. Created in 1993.
+Markup language for static web pages, first created in 1993, now at version HTLM5.
 
 ## Document structure
+```
 <!DOCTYPE html>
 <html>
 <head>
@@ -10,6 +11,7 @@ Markup language for static web pages. Created in 1993.
 </head>
 <body></body>
 </html>
+```
 
 ## Text structuring tags
 <p> <pre> <code>
